@@ -1,0 +1,184 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Body styling */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #4b4a39;
+    color: #fff;
+    padding: 20px;
+    width: 100%;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #ccc;
+    white-space: nowrap;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Lisää tilaa linkkien väliin */
+}
+
+.navbar.active {
+    display: flex;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 5px 0;
+}
+
+.search-icon {
+    font-size: 1.8em;
+    cursor: pointer;
+}
+
+/* Main content styling */
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; /* Keskittää laatikon */
+    padding: 20px;
+}
+
+.content-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+/* Lisätään erillinen määritys textarealle */
+form textarea {
+    min-height: 150px; /* Voit säätää tätä arvoa tarpeen mukaan */
+    resize: vertical; /* Sallii tekstialueen koon muuttamisen pystysuunnassa */
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Footer styling */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #4b4a39;
+    color: #fff;
+    text-align: left;
+    padding: 20px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1em;
+}
+
+.contact-info {
+    font-size: 1em;
+}
+
+/* Lisätään hampurilaisvalikon tyyli */
+.menu-toggle {
+    font-size: 1.8em;
+    cursor: pointer;
+    padding: 5px;
+    display: block;
+    color: #fff;
+    z-index: 1001;
+    background: none;
+    border: none;
+    width: auto;
+}
+
+.menu-toggle:hover {
+    background: none;
+    opacity: 0.8;
+}
+
+/* Mobiilinavigaation toiminnallisuus siirretty script.js tiedostoon */
