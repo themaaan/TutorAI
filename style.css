@@ -8,6 +8,7 @@
 html, body {
     height: 100%;
     margin: 0;
+    overflow: hidden;
 }
 
 /* Body styling */
@@ -15,6 +16,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100vh;
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 60px;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Header styling */
@@ -25,8 +31,11 @@ header {
     background-color: #4b4a39;
     color: #fff;
     padding: 20px;
+    height: 10vh; /* Yläpalkki on 10% näytön korkeudesta */
     width: 100%;
-    position: relative;
+    position: fixed; /* Changed to fixed */
+    top: 0; /* Stick to top */
+    z-index: 1000; /* Ensure header stays on top */
 }
 
 .header-content {
@@ -49,7 +58,7 @@ header {
 .navbar {
     display: flex;
     justify-content: center;
-    gap: 50px; /* Lisää tilaa linkkien väliin */
+    gap: 50px;
 }
 
 .navbar.active {
@@ -73,8 +82,11 @@ header {
 main {
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto; /* Keskittää laatikon */
-    padding: 20px;
+    flex: 1;
+    margin: 0 auto;
+    padding-top: 12vh; /* Jätetään tilaa yläpalkille (10vh + pientä marginaalia) */
+    padding-bottom: 10vh; /* Jätetään tilaa alapalkille (8vh + pientä marginaalia) */
+    overflow-y: auto; /* Enable vertical scrolling */
 }
 
 .content-wrapper {
@@ -119,10 +131,9 @@ form textarea {
     border-radius: 5px;
 }
 
-/* Lisätään erillinen määritys textarealle */
 form textarea {
-    min-height: 150px; /* Voit säätää tätä arvoa tarpeen mukaan */
-    resize: vertical; /* Sallii tekstialueen koon muuttamisen pystysuunnassa */
+    min-height: 150px;
+    resize: vertical;
 }
 
 button {
@@ -142,13 +153,15 @@ button:hover {
 
 /* Footer styling */
 footer {
-    position: fixed;
+    position: fixed; /* Changed to fixed */
     bottom: 0;
+    height: 8vh; /* Alapalkki on 8% näytön korkeudesta */
     width: 100%;
     background-color: #4b4a39;
     color: #fff;
     text-align: left;
     padding: 20px;
+    z-index: 1000; /* Ensure footer stays on top */
 }
 
 .footer-content {
@@ -163,7 +176,7 @@ footer {
     font-size: 1em;
 }
 
-/* Lisätään hampurilaisvalikon tyyli */
+/* Hamburger menu styling */
 .menu-toggle {
     font-size: 1.8em;
     cursor: pointer;
@@ -181,4 +194,4 @@ footer {
     opacity: 0.8;
 }
 
-/* Mobiilinavigaation toiminnallisuus siirretty script.js tiedostoon */
+/* Mobile navigation functionality moved to script.js */
