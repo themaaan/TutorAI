@@ -1,197 +1,364 @@
-/* Reset styles */
-* {
+/* Fontit Google Fontsista */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+/* Perusasetukset */
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-html, body {
-    height: 100%;
-    margin: 0;
-    overflow: hidden;
-}
-
-/* Body styling */
-body {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    position: relative;
-    padding-top: 80px;
-    padding-bottom: 60px;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background: linear-gradient(
+        rgba(242, 244, 245, 1),  /* Muutettu läpinäkyvämmäksi (0.85 -> 0.6) */
+        rgba(242, 244, 245, 0.4)   /* Sama arvo myös alhaalla */
+    ),
+    url('pictures/kuva.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;  /* Kuva pysyy paikallaan scrollatessa */
+    background-repeat: no-repeat;
 }
 
-/* Header styling */
+/* Header ja navigointi */
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #4b4a39;
-    color: #fff;
     padding: 20px;
-    height: 10vh; /* Yläpalkki on 10% näytön korkeudesta */
-    width: 100%;
-    position: fixed; /* Changed to fixed */
-    top: 0; /* Stick to top */
-    z-index: 1000; /* Ensure header stays on top */
+    position: relative;
+    background: transparent;
 }
 
 .header-content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
 }
 
 .logo {
-    font-size: 2.5em;
-    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin-left: 0;
+}
+
+.company-name {
+    display: none;
 }
 
 .subtitle {
-    font-size: 1.2em;
-    color: #ccc;
-    white-space: nowrap;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+    color: #cab26a;
+    margin: 0;
+    text-align: center;
+    padding-left: 0;
+    width: 300px;
 }
 
-/* Navbar styles */
 .navbar {
     display: flex;
-    justify-content: center;
-    gap: 50px;
-}
-
-.navbar.active {
-    display: flex;
+    gap: 30px;
+    align-items: center;
+    padding: 20px 40px;
+    position: absolute;
+    top: 20px;
+    right: 100px;
+    background: none;
 }
 
 .navbar a {
-    color: #fff;
+    color: #333;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1em;
+    font-weight: 600;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2em;
-    padding: 5px 0;
+    padding: 5px 10px;
 }
 
-.search-icon {
-    font-size: 1.8em;
-    cursor: pointer;
+.navbar a:hover {
+    color: #555;
 }
 
-/* Main content styling */
-main {
-    width: 100%;
-    max-width: 1200px;
-    flex: 1;
-    margin: 0 auto;
-    padding-top: 12vh; /* Jätetään tilaa yläpalkille (10vh + pientä marginaalia) */
-    padding-bottom: 10vh; /* Jätetään tilaa alapalkille (8vh + pientä marginaalia) */
-    overflow-y: auto; /* Enable vertical scrolling */
-}
-
+/* Sisältöosiot */
 .content-wrapper {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(5px);
+    border-radius: 8px;
 }
 
-h2 {
-    font-size: 2.5em;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: center;
+/* Typografia */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #333;
 }
 
-p {
-    font-size: 1.2em;
+p, ul, li {
+    font-family: 'Open Sans', sans-serif;
+    color: #555;
     line-height: 1.6;
+}
+
+/* Palveluosiot */
+.product-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(5px);
+    border-radius: 8px;
+}
+
+/* Kuvan container */
+.product-image {
+    flex: 0 0 400px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Tekstisisältö */
+.product-content {
+    flex: 1;
+}
+
+.product-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8em;
+    color: #000;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.product-content p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #000;
+}
+
+/* Johdanto-osion tyylit */
+.content-wrapper h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8em;
+    color: #000;
     margin-bottom: 20px;
 }
 
-/* Form styling */
-form {
-    max-width: 600px;
+.content-wrapper p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #000;
+}
+
+/* Navigointilaatikot etusivulla */
+.nav-box {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.nav-box:hover {
+    transform: translateY(-5px);
+}
+
+.nav-box h3 {
+    font-family: 'Playfair Display', serif;
+    color: #333;
+}
+
+.nav-box p {
+    font-family: 'Open Sans', sans-serif;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    padding: 20px;
+    background-color: transparent;
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
+    background: transparent;
+}
+
+footer p {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section tyylit */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-section h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    color: #cab26a;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.hero-button {
+    padding: 15px 30px;
+    background-color: #cab26a;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.hero-button:hover {
+    background-color: #b69b59;
+    color: #333;
+}
+
+.hero-button.secondary {
+    background-color: #cab26a;
+    color: #333;
+}
+
+.hero-button.secondary:hover {
+    background-color: #b69b59;
+    color: #333;
+}
+
+/* Logo-kuvan koko */
+.logo img {
+    width: 300px;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: -5px;
+}
+
+/* Scroll reveal efektien alkutilat */
+.reveal-left, .reveal-right {
+    opacity: 0;
+}
+
+/* Aktiivinen tila */
+.reveal-left.active, .reveal-right.active {
+    opacity: 1;
+}
+
+/* Palveluiden container */
+.services-container {
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-form input,
-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #333;
-    border-radius: 5px;
+/* Yhteystiedot */
+.contact-info {
+    font-size: 0.9em;  /* Pienempi fonttikoko */
+    line-height: 1.4;  /* Tiiviimpi riviväli */
+    margin-bottom: 30px;
 }
 
-form textarea {
+.contact-info p {
+    margin: 5px 0;  /* Pienempi marginaali rivien välillä */
+}
+
+/* Lomakkeen container */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;  /* Rajoitettu leveys */
+    margin: 0 auto;    /* Keskitetty */
+}
+
+/* Lomakkeen kentät */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 1.2em;
+    color: #000;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.form-group textarea {
     min-height: 150px;
     resize: vertical;
 }
 
-button {
-    display: block;
-    width: 100%;
-    padding: 10px;
+/* Lähetä-painike */
+.submit-button {
+    padding: 14px 28px;
+    font-size: 1.1em;
     background-color: #333;
-    color: #fff;
+    color: white;
     border: none;
-    border-radius: 5px;
-    font-size: 1.2em;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    align-self: flex-start;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
+.submit-button:hover {
     background-color: #555;
 }
 
-/* Footer styling */
-footer {
-    position: fixed; /* Changed to fixed */
-    bottom: 0;
-    height: 8vh; /* Alapalkki on 8% näytön korkeudesta */
-    width: 100%;
-    background-color: #4b4a39;
-    color: #fff;
-    text-align: left;
-    padding: 20px;
-    z-index: 1000; /* Ensure footer stays on top */
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    font-size: 1em;
-}
-
-.contact-info {
-    font-size: 1em;
-}
-
-/* Hamburger menu styling */
-.menu-toggle {
-    font-size: 1.8em;
-    cursor: pointer;
-    padding: 5px;
+/* Logo-linkin tyylit */
+.logo a {
     display: block;
-    color: #fff;
-    z-index: 1001;
-    background: none;
-    border: none;
-    width: auto;
+    text-decoration: none;
+    line-height: 0;
 }
 
-.menu-toggle:hover {
-    background: none;
-    opacity: 0.8;
+/* Logo-kuvan hover-efekti (valinnainen) */
+.logo a:hover img {
+    opacity: 0.9;  /* Pieni läpinäkyvyys hover-tilassa */
+    transition: opacity 0.3s ease;
 }
 
-/* Mobile navigation functionality moved to script.js */

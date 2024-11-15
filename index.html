@@ -3,30 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arvosiivous Oy</title>
+    <title>Etusivu - Arvosiivous Oy</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
-
     <!-- Header -->
     <header>
         <div class="header-content">
-            <div class="logo">Arvosiivous Oy</div>
-            <h3 class="subtitle">Siivouspalvelut yrityksille ja kiinteistöille</h3>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo/logo.png" alt="Arvosiivous Oy Logo">
+                </a>
+                <h3 class="subtitle">Siivouspalvelut yrityksille ja kiinteistöille</h3>
+            </div>
         </div>
         <nav class="navbar">
-            <a href="index.html">Etusivut</a>
-            <a href="contact.html">Yhteydenottolomake</a>
+            <a href="contact.html">Yhteydenotto</a>
+            <a href="product.html">Palvelut</a>
         </nav>
-        <div class="search-icon">&#128269;</div>
     </header>
 
-    <!-- Main Content -->
+    <!-- Main content -->
     <main>
-        <div class="content-wrapper">
-            <h2>Lattiamateriaalien hionnat, Peruspuhdistukset, Hoito- ja suoja-ainekäsittelyt</h2>
-            <p>Tervetuloa tutustumaan ammattitaitoiseen ja laadukkaaseen siivouspalveluihimme. Olemme sitoutuneet tarjoamaan asiakkaillemme parasta laatua ja laajan valikoiman palveluja, jotka pitävät tilasi huippukunnossa.</p>
-            <p>Valikoimaamme kuuluvat peruspuhdistukset, suojaavat vahaukset, ja erikoiskäsittelyt ikkunapinnoille. Luota ammattitaitoomme ja anna tilojesi loistaa puhtautta.</p>
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <h1>Puhtautta & Laatua</h1>
+            <p>Ammattitaitoista siivouspalvelua yrityksille ja kiinteistöille</p>
+            <div class="hero-buttons">
+                <a href="contact.html" class="hero-button">Pyydä tarjous</a>
+                <a href="product.html" class="hero-button secondary">Tutustu palveluihin</a>
+            </div>
         </div>
     </main>
 
@@ -34,6 +41,5 @@
     <footer>
         <p>&copy; 2024 Arvosiivous Oy</p>
     </footer>
-
 </body>
 </html>

@@ -5,52 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ota Yhteyttä</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <div class="header-content">
-            <div class="logo">Arvosiivous Oy</div>
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo/logo.png" alt="Arvosiivous Oy Logo">
+            </a>
             <h3 class="subtitle">Siivouspalvelut yrityksille ja kiinteistöille</h3>
         </div>
-        <nav class="navbar">
-            <a href="index.html">Etusivut</a>
-            <a href="contact.html">Yhteydenottolomake</a>
-        </nav>
-        <div class="search-icon">&#128269;</div>
-    </header>
+    </div>
+    <nav class="navbar">
+        <a href="contact.html">Yhteydenotto</a>
+        <a href="product.html">Palvelut</a>
+    </nav>
+  </header>
 
     <!-- Main Content -->
     <main>
-        <h2>Ota yhteyttä</h2>
-        <p>Voit olla meihin yhteydessä joko täyttämällä alla olevan lomakkeen, tai soittaa meille suoraan.</p>
-
-        <!-- Contact Information -->
-        <div class="contact-info-wrapper">
-            <h3>Contact Information</h3>
+        <div class="content-wrapper">
+            <h2>Ota yhteyttä</h2>
+            
+            <!-- Yhteystiedot -->
             <div class="contact-info">
-                <p>Laana Sherifi, CEO<br>Phone: 040 779 8883<br>Email: laana.sherifi@arvosiivous.fi</p>
-                <p>Shakhwan Sherifi, Service Manager<br>Phone: 045 210 2688<br>Email: shakhwan.sherifi@arvosiivous.fi</p>
+                <p>Arvosiivous Oy</p>
+                <p>Katuosoite 123</p>
+                <p>00100 Helsinki</p>
+                <p>Puh: 040 123 4567</p>
+                <p>Email: info@arvosiivous.fi</p>
             </div>
+
+            <!-- Lomake -->
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nimi</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Sähköposti</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Puhelinnumero</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Aihe</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Viesti</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-button">Lähetä viesti</button>
+            </form>
         </div>
-
-        <!-- Contact Form -->
-        <form>
-            <label for="name">Nimesi</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Sähköpostiosoitteesi</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="subject">Aihe</label>
-            <input type="text" id="subject" name="subject" required>
-
-            <label for="message">Viestisi (valinnainen)</label>
-            <textarea id="message" name="message"></textarea>
-
-            <button type="submit">Lähetä</button>
-        </form>
     </main>
 
     <!-- Footer -->
