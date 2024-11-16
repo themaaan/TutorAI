@@ -12,7 +12,7 @@ body {
         rgba(242, 244, 245, 1),  /* Muutettu läpinäkyvämmäksi (0.85 -> 0.6) */
         rgba(242, 244, 245, 0.4)   /* Sama arvo myös alhaalla */
     ),
-    url('pictures/kuva.webp');
+    url('../pictures/kuva.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;  /* Kuva pysyy paikallaan scrollatessa */
