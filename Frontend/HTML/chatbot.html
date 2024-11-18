@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - TutorPro</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script src="../JS/script.js"></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+        <div class="logo">
+            <a href="index.html">
+                <img src="pictures/logo.png" alt="TutorAI Oy Logo">
+            </a>
+            <h3 class="subtitle">Professional Tutoring Services for Students</h3>
+        </div>
+    </div>
+    <nav class="navbar">
+        <a href="contact.html">Contact</a>
+        <a href="product.html">Services</a>
+        <a href="chatbot.html">ChatBot</a>
+    </nav>
+  </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="content-wrapper">
+            <div class="chat-container" style="width: 80%; max-width: 800px; height: 600px; margin: 0 auto;">
+                <div class="chat-messages" id="chat-messages" style="height: 500px; overflow-y: auto;">
+                    <!-- Messages will appear here -->
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="user-input" placeholder="Type your message..." style="width: 80%; padding: 12px;">
+                    <button id="sendButton">Send</button>
+                </div>
+            </div>
+
+            <script src="../JS/chatbot.js"></script>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 TutorAI Oy</p>
+    </footer>
+
+</body>
+</html>
